@@ -11,20 +11,25 @@ package lecture2homework;
 *
 * */
 
-public final class ImplementImmutableClass {
-    private final int id;
+public final class ImmutablePerson {
     private final String name;
-
-    public ImplementImmutableClass(int id, String name) {
+    private final String address;
+    public ImmutablePerson(String name, String address) {
         this.name = name;
-        this.id = id;
+        this.address = address;
     }
 
-    public int getId() {
-        return id;
+    public String getAddress() {
+        return address;
     }
 
     public String getName() {
         return name;
     }
+
+    @Override
+    public String toString() {
+        return "[ Person: name = " + name + ", address = " + address + " ]";
+    }
 }
+
